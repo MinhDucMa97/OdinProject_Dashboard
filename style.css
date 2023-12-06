@@ -1,29 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
+
+ul {
+	list-style: none;
+}
+
+/* 
+  CSS for container 
+*/
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: 1fr 3fr;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar contentSection";
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: 1fr 3fr;
+	grid-template-areas:
+		"sidebar header"
+		"sidebar contentSection";
+	text-align: center;
 }
 
+/* 
+  CSS for header section 
+*/
 .header {
-  grid-area: header;
+	grid-area: header;
+	background-color: burlywood;
+	display: grid;
+	grid-template: 1fr 1fr / 3fr 1fr;
+	padding: 0.5rem 2rem;
 }
 
+.search-container {
+	display: flex;
+	gap: 1rem;
+	justify-content: start;
+	align-items: center;
+	padding-left: 1rem;
+}
+
+.search-container > .search-bar {
+	flex: 1;
+	border-radius: 1.5rem;
+	border-style: none;
+	padding: 2px 10px;
+}
+
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+}
+.profile-container > .placeholder-image {
+	object-fit: cover;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.profile-container > .placeholder-image:hover {
+	transform: scale(1.2);
+}
+
+.profile-container > .user-name {
+	cursor: pointer;
+}
+
+.welcome-container {
+	display: grid;
+	grid-template: 1fr 1fr/ 0.5fr 6fr;
+	padding-left: 1rem;
+}
+
+.welcome-container > .placeholder-image {
+	grid-row: 1 / 3;
+	object-fit: contain;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	transition: 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.welcome-container > .placeholder-image:hover {
+	transform: scale(1.2);
+}
+
+.welcome-container > .welcome-text,
+.main-user-name {
+	text-align: start;
+	padding-left: 1rem;
+}
+
+.welcome-container > h4 {
+	font-size: 18px;
+}
+
+.welcome-container > h3 {
+	font-size: 20px;
+}
+
+.btns-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.btns-container > button {
+	color: white;
+	background-color: gray;
+	padding: 0.5rem 1.5rem;
+	border-radius: 12px;
+	border-style: none;
+	cursor: pointer;
+}
+
+/* 
+  CSS for sidebar 
+*/
 .sidebar {
-  grid-area: sidebar;
+	grid-area: sidebar;
+	background-color: aqua;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.sidebar > .navigation {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .content {
-  grid-area: contentSection;
+	grid-area: contentSection;
+	background-color: brown;
+	padding: 1rem 2rem;
 }

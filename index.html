@@ -1,71 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="sidebar">
-        <div class="logo"></div>
-        <div class="navigation">
-          <ul>
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
-            <li>Setting</li>
-            <li>Support</li>
-            <li>Privacy</li>
-          </ul>
-        </div>
-        <div class="header">
-          <div class="upper-header">
-            <div class="left-upper-header">
-              <div class="search-icon"></div>
-              <div class="search-box">
-                <label for="search-bar"></label>
-                <input
-                  type="text"
-                  name="search-bar"
-                  id="search-bar"
-                  placeholder="Project Name"
-                />
-              </div>
-            </div>
-            <div class="right-upper-header">
-              <div class="notification-icon"></div>
-              <div class="small-avatar"></div>
-              <div class="user-name"></div>
-            </div>
-          </div>
-          <div class="lower-header">
-            <div class="left-lower-header">
-              <div class="big-avatar"></div>
-              <div class="text-section"></div>
-            </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/c783ceb17d.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="search-container">
+					<label for="search-bar"
+						><i class="fa-solid fa-magnifying-glass fa-lg"></i
+					></label>
+					<input type="text" id="search-bar" class="search-bar" />
+				</div>
+				<div class="profile-container">
+					<i class="fa-regular fa-bell fa-lg"></i>
+					<img class="placeholder-image" src="bunbohue.jpg" alt="bun bo hue" />
+					<h3 class="user-name">Bun's Travel</h3>
+				</div>
 
-            <div class="right-lower-header">
-              <div class="header-button-list">
-                <ul>
-                  <li><button>New</button></li>
-                  <li><button>Upload</button></li>
-                  <li><button>Share</button></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content">
-        <div class="card-container"></div>
-        <div class="annoucements"></div>
-        <div class="trending-items"></div>
-      </div>
-    </div>
-  </body>
+				<div class="welcome-container">
+					<img
+						class="placeholder-image"
+						src="bunbohue.jpg"
+						alt="placeholder image"
+					/>
+					<h4 class="welcome-text">Hi there,</h4>
+					<h3 class="main-user-name">Bun's Travel(@TatseWithBun)</h3>
+				</div>
+
+				<div class="btns-container">
+					<button>New</button>
+					<button>Upload</button>
+					<button>Share</button>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="logo">
+					<!-- <img src="bunbohue.jpg" alt="bunbohue" /> -->
+					<h1>Dashboard</h1>
+				</div>
+
+				<ul class="navigation">
+					<li>Home</li>
+					<li>Profile</li>
+					<li>Messages</li>
+					<li>History</li>
+					<li>Tasks</li>
+					<li>Communities</li>
+					<li>Setting</li>
+					<li>Support</li>
+					<li>Privacy</li>
+				</ul>
+			</div>
+
+			<div class="content">
+				<div class="card-container">
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+					<div class="card">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa
+						alias recusandae, necessitatibus ratione sapiente eum animi dolore
+						molestias doloribus fugiat nulla quasi, a adipisci culpa voluptates
+						non nemo doloremque!
+					</div>
+				</div>
+				<div class="annoucements"></div>
+				<div class="trending-items"></div>
+			</div>
+		</div>
+	</body>
 </html>
