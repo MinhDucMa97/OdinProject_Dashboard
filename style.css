@@ -238,13 +238,17 @@ ul {
 
 .item > .item-text-section {
   grid-column: 2 / 3;
+  align-self: center;
 }
 
-.item-text-section h3.dish-name,
-.item-text-section h4.dish-region {
+.item-text-section h3.dish-name {
   font-size: 1em;
 }
 
+.item-text-section h4.dish-region {
+  font-weight: lighter;
+  font-size: 0.6rem;
+}
 .content > .trending-items > .item-section > .item > img {
   width: 3rem;
   height: 3rem;
