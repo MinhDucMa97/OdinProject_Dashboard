@@ -222,6 +222,11 @@ ul {
   padding-left: 0.5rem;
 }
 
+/* Trending items  */
+.trending-items {
+  display: grid;
+}
+
 .trending-items > .item-section {
   display: grid;
   gap: 10px;
