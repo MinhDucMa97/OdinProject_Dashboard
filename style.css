@@ -17,7 +17,7 @@ ul {
 
 .container {
   display: grid;
-  grid-template: auto 1fr / 1fr 4fr;
+  grid-template: auto 1fr / 1fr 5fr;
   grid-template-areas:
     "sidebar header"
     "sidebar contentSection";
@@ -127,11 +127,32 @@ ul {
   border-radius: 0.5em;
   border-style: none;
   cursor: pointer;
+
   transition: 0.25s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.btns-container > button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  transform: scale(0);
+  /* transform-origin: left; */
+  transition: transform 500ms ease-in;
 }
 
 .btns-container > button:hover {
-  transform: scale(1.08);
+  transform: scale(1.12);
+}
+
+.btns-container > button:hover::after {
+  transform: scale(1);
 }
 
 /* 
@@ -184,15 +205,35 @@ ul {
   cursor: pointer;
 }
 
-.sidebar > ul > li > span {
-  transition: 1 ease-in-out;
-  transition-property: border-bottom;
+.sidebar > ul > li > a {
+  /* transition: 1 ease-in-out;
+  transition-property: border-bottom; */
   text-transform: uppercase;
   letter-spacing: 0.09rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.sidebar > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+
+  /* underline styling with animation */
+  transform: scale(0);
+  transition: transform 220ms ease-in;
+}
+
+.sidebar > ul > li > a:hover::after {
+  transform: scale(1);
 }
 
 .sidebar > ul > li > span:hover {
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
 }
 
 .sidebar > ul > li > i {
@@ -237,18 +278,18 @@ ul {
   transform: scale(1.07);
 }
 
-.image-block {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+.card > .card-content-header {
+  font-size: 0.85rem;
+  text-align: start;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
-.image-block img {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
+.card > h4 {
+  font-size: 0.785em;
+  text-align: start;
+  font-weight: 230;
+  line-height: 1.25rem;
 }
 
 .card > .action-block {
@@ -296,6 +337,7 @@ ul {
 .trending-items > .item-section > .item {
   display: grid;
   grid-template: 1fr/ 0.75fr 2fr;
+  gap: 1rem;
 }
 
 .item > img {
